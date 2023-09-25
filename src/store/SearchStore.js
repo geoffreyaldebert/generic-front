@@ -11,14 +11,15 @@ export const useSearchStore = defineStore("search", {
   }),
   getters: {
     facets: (state) => {
-      return state.data.facetDistribution || {}
+      return null
     },
     datasets: (state) => {
-      return state.data.hits || []
+      return state.data.data || []
     },
     pagination: (state) => {
       if (!state.data) return []
-      return [...Array(state.data.totalPages).keys()].map(page => {
+      if (!state.data.total && !state.data.page_size) return []
+      return [...Array(Math.round((state.data.total / state.data.page_size))).keys()].map(page => {
         page += 1
         return {
           label: page,
@@ -29,9 +30,9 @@ export const useSearchStore = defineStore("search", {
     },
   },
   actions: {
-    async search (query, page = 1, filter = []) {
-      const args = { hitsPerPage: pageSize, facets: ["organization.name"], page: page, filter: filter}
-      const results = await searchAPI.search(query, args)
+    async search(query, topic, page = 1, filter = []) {
+      const args = { hitsPerPage: pageSize, page: page, filter: filter }
+      const results = await searchAPI.search(query, topic, page, args)
       this.data = results
     }
   },

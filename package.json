@@ -12,12 +12,16 @@
   "dependencies": {
     "@gouvminint/vue-dsfr": "^3.6.0",
     "axios": "^1.4.0",
+    "chart.js": "^4.4.0",
     "filesize": "^10.0.7",
-    "marked": "^5.1.0",
+    "markdown-it": "^13.0.1",
+    "marked": "^5.1.2",
     "meilisearch": "^0.33.0",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",
+    "vue-chartjs": "^5.2.0",
     "vue-loading-overlay": "^6.0.3",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.2.2",
     "vue3-text-clamp": "^0.1.1",
     "vue3-toastify": "^0.1.11"

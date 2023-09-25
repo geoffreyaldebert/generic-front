@@ -1,39 +1,41 @@
 <script setup>
-import { ref } from "vue"
-import { RouterView, useRouter } from "vue-router"
-import Navigation from "./components/Navigation.vue"
+import { ref } from "vue";
+import { RouterView, useRouter } from "vue-router";
+import Navigation from "./components/Navigation.vue";
+import config from "@/config";
 
-const router = useRouter()
-const query = ref("")
+const router = useRouter();
+const query = ref("");
 
 const updateQuery = (q) => {
-  query.value = q
-}
+  query.value = q;
+};
 
 const doSearch = () => {
-  router.push({name: "datasets", query: {q: query.value}})
-}
+  router.push({ name: "datasets", query: { q: query.value } });
+};
 
+const logotext = ref(config.website__rf_title);
+const servicetitle = ref(config.website__title);
+const logoOperator = ref(config.website__logo_operator);
 </script>
 
 <template>
   <DsfrHeader
-    service-title="Ecosphères"
+    :service-title="servicetitle"
     service-description=""
     home-to="/"
     :quick-links="[]"
     :show-search="true"
     @search="doSearch"
     @update:modelValue="updateQuery"
-    logo-text="MINISTÈRES<br>
-      TRANSITION ÉCOLOGIQUE<br>
-      COHÉSION DES TERRITOIRES<br>
-      TRANSITION ÉNERGÉTIQUE<br>
-      MER"
+    :logo-text="logotext"
+    :operatorImgSrc="logoOperator"
+    :operatorImgStyle="{ height: '60px' }"
   />
 
   <div class="fr-header__body">
-    <div class="fr-container  width-inherit">
+    <div class="fr-container width-inherit">
       <Navigation />
       <RouterView />
     </div>
