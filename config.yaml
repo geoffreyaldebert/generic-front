@@ -3,12 +3,12 @@
 # data.gouv.fr API base URL
 datagouvfr_api_url: https://www.data.gouv.fr/api
 
-website__title: "meteo.data.gouv.fr"
-website__rf_title: "République<br>Française"
+website__title: "spf.data.gouv.fr"
+website__rf_title: "Ministère<br>de la santé et<br>de la prévention"
 # leave empty if not pertinent
-website__logo_operator: "https://upload.wikimedia.org/wikipedia/fr/4/47/Logo_M%C3%A9t%C3%A9o_France_2016.svg"
-website__homepage_title: "Données météo"
-website__homepage_subtitle: "Portail des données publiques open data de Météo-France"
+website__logo_operator: "https://static.data.gouv.fr/avatars/76/69d8ead7684d25a80c9fa97d943b06-100.png"
+website__homepage_title: "Données Santé Publique France"
+website__homepage_subtitle: "Portail des données publiques open data de Santé Publique France"
 
 website__menu_items:
   - 
@@ -22,50 +22,52 @@ website__menu_items:
     linkPage: "/datasets"
     type: "component"
   -
-    name: "Informations"
+    name: "C'est quoi SPF ?"
     id: "infos"
     linkPage: "/informations"
     type: "page"
     url: "https://raw.githubusercontent.com/etalab/datagouvfr-pages/master/pages/about/ressources.md"
   -
-    name: "A propos"
-    id: "about"
-    linkPage: "/about"
+    name: "Notice spéciale Covid"
+    id: "covid"
+    linkPage: "/covid"
     type: "page"
     url: "https://raw.githubusercontent.com/etalab/datagouvfr-pages/master/pages/legal/charter.md"
+  -
+    name: "L'open data en santé"
+    id: "opendatasante"
+    linkPage: "/opendatasante"
+    type: "page"
+    url: "https://raw.githubusercontent.com/etalab/datagouvfr-pages/master/pages/legal/accessibility.md"
 
 # img should be square
 website__home_buttons:
   -
-    title: "En savoir plus sur la démarche"
+    title: "C'est quoi Santé Publique France ?"
     link: "/about"
-    img: "https://static.data.gouv.fr/avatars/44/3f1d6b9eac45b2bca7ae9b2a80d812-100.jpg"
-  -
-    title: "Utiliser les API Météo-France"
-    link: "https://portail-api.meteofrance.fr/devportal/apis"
-    img: "https://static.data.gouv.fr/avatars/40/05f4e0291e4ad49a9321071c195cce-100.jpg"
+    img: "https://static.data.gouv.fr/avatars/76/69d8ead7684d25a80c9fa97d943b06-100.png"
   -
     title: "Voir les jeux de données récents"
     link: "/datasets"
     img: "https://transport.data.gouv.fr/images/icons/recently-added-datasets-cbc8b7a7d744618cfe4d97a32e5570ac.png?vsn=d"
 
-website__main_topic: "meteo-test" # 650da7e9ac89b5a2ac75a11a sur demo
+website__main_topic: "spf-test" 
 
-website__show_topic_charts: true
+website__show_topic_charts: false
 
 website__list_topics:
   - 
-    slug: "meteo-test2" # 650db7d220cf97f7caaa3c78
-    name: "Pack données climatologiques"
+    slug: "spf-test2" # 650db7d220cf97f7caaa3c78
+    name: "Les données autour du coronavirus"
     tagline: "sous-titre"
-    description: "il s'agit de données climatologiques" 
-    img: "https://www.mortgage-express.co.nz/hs-fs/hubfs/2-Aug-24-2022-03-35-18-99-AM.png?width=1200&name=2-Aug-24-2022-03-35-18-99-AM.png"
+    description: "il s'agit de données covid" 
+    img: "https://www.canetenroussillon.fr/wp-content/uploads/bandeauCoronavirusCOVID-19.png"
   - 
-    slug: "meteo-test3" # 650db7da501723ab94fbf426
-    name: "Pack changement climatique"
+    slug: "spf-test3" # 650db7da501723ab94fbf426
+    name: "Les données bactéries émergentes"
     tagline: "sous-titre"
-    description: "L'effondrement a commencé" 
-    img: "https://science-et-vie-junior.fr/wp-content/uploads/sevjunior/2021/05/24491_1455936_k2_k1_3360060-1.jpg"
+    description: "SPF ne fait pas que du covid" 
+    img: "https://img.passeportsante.net/1200x675/2021-05-06/i106169-microbes-virus-bacteries-differences.webp"
 
 
 
